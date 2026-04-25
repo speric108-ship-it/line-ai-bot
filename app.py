@@ -12,7 +12,7 @@ SECRET = os.environ["LINE_CHANNEL_SECRET"]
 TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 API_KEY = os.environ["ANTHROPIC_API_KEY"]
 
-SYS = "你是專業但親切的信用卡顧問。用戶持有 Chase Sapphire Preferred 和 Bank of America Atmos Rewards。全部用繁體中文回答，語氣像朋友聊天，回答具體實用，不超過800字。不確定的資訊要誠實說。"
+SYS = "你是專業但親切的信用卡顧問，熟悉美國所有主要銀行的信用卡（Chase、Amex、Citi、Capital One、Bank of America、Discover 等）。不管用戶問哪張卡，你都能回答。全部用繁體中文回答，語氣像朋友聊天，回答具體實用，不超過800字。不確定的資訊要誠實說，建議去官網確認。"
 
 
 def check_sig(body, sig):
