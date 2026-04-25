@@ -63,6 +63,7 @@ def callback():
         abort(403)
     data = json.loads(body)
     for ev in data.get("events", []):
+        print("User ID:", ev.get("source", {}).get("userId", "unknown"))
         if ev["type"] == "message" and ev["message"]["type"] == "text":
             try:
                 ans = ask_claude(ev["message"]["text"])
